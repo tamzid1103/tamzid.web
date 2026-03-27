@@ -4,156 +4,183 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Tamzidul Haque portfolio - CSE student building software projects with Python, Java, and C while solving real-world problems.">
+  <meta name="theme-color" content="#0a2f6f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tamzidul Haque | Portfolio">
+  <meta property="og:description"
+    content="Explore Tamzid's portfolio, skills, and experience in software development and problem solving.">
+  <meta property="og:image" content="tamzid_website.jpg">
+  <meta property="og:url" content="index.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tamzidul Haque | Portfolio">
+  <meta name="twitter:description"
+    content="CSE student portfolio featuring skills, experience, and upcoming project case studies.">
+  <meta name="twitter:image" content="tamzid_website.jpg">
   <title>Tamzidul Haque | Portfolio</title>
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Tamzidul Haque",
+      "jobTitle": "CSE Student",
+      "url": "index.html",
+      "image": "tamzid_website.jpg",
+      "sameAs": [
+        "https://github.com/tamzid1103"
+      ],
+      "email": "mailto:tamzidul241-15-877@diu.edu.bd"
+    }
+  </script>
 
-  <!-- Alpine -->
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-  <!-- Animate -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- Particles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    /* Skill hover animation */
-    .skill-box {
-      transition: all 0.3s ease;
-    }
-
-    .skill-box:hover {
-      transform: scale(1.08);
-    }
-  </style>
 </head>
 
-<body class="bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 text-white">
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- NAVBAR -->
-  <header class="fixed w-full z-50 bg-blue-900/30 backdrop-blur">
-    <div class="max-w-6xl mx-auto flex justify-between p-4">
-      <h1 class="font-bold text-xl">Tamzid</h1>
-
-      <!-- FIXED: visible on mobile -->
-      <nav class="space-x-6">
-        <a href="index.html" class="hover:text-gray-200">Home</a>
-        <a href="projects.html" class="hover:text-gray-200">Projects</a>
-        <a href="contact.html" class="hover:text-gray-200">Contact</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">Tamzidul Haque</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu"
+        data-menu-toggle>
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a class="active" href="index.html" aria-current="page">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="h-screen flex items-center justify-center text-center relative">
-    <div id="particles-js" class="absolute inset-0"></div>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div id="particles-js" class="particles-layer" aria-hidden="true"></div>
+      <div class="hero-content">
+        <img src="tamzid_website.jpg" alt="Tamzidul Haque profile photo" class="hero-photo">
+        <h1 id="hero-title">CSE Student, Problem Solver, and Aspiring Software Engineer</h1>
+        <p class="lead">I build practical software and improve learning outcomes through clear thinking,
+          communication, and consistent execution.</p>
+        <a href="projects.html" class="button button-primary">View My Work</a>
+      </div>
+    </section>
 
-    <div class="z-10 animate__animated animate__fadeIn">
-      <img src="tamzid_website.jpg" class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-white object-cover">
+    <section class="section">
+      <div class="container surface section-content">
+        <h2 class="section-title">About Me</h2>
+        <p class="muted">I am studying Computer Science and Engineering at Daffodil International University,
+          with a focus on software fundamentals, clean coding practices, and practical problem-solving.
+          Alongside programming in C, Python, and Java, I have experience in tutoring and digital content work,
+          which strengthened how I explain ideas, lead small teams, and deliver results.</p>
+      </div>
+    </section>
 
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">
-        CSE Student | Problem Solver | Aspiring Software Engineer
-      </h1>
+    <section class="section">
+      <div class="container surface section-content">
+        <h2 class="section-title">Skills</h2>
+        <div class="grid skills-grid" role="list" aria-label="Skills list">
+          <div class="skill-chip" role="listitem">C</div>
+          <div class="skill-chip" role="listitem">Python</div>
+          <div class="skill-chip" role="listitem">Java</div>
+          <div class="skill-chip" role="listitem">HTML & CSS</div>
+          <div class="skill-chip" role="listitem">Problem Solving</div>
+          <div class="skill-chip" role="listitem">Communication</div>
+          <div class="skill-chip" role="listitem">Teamwork</div>
+          <div class="skill-chip" role="listitem">Content Planning</div>
+        </div>
+      </div>
+    </section>
 
-      <p class="mb-6">Building solutions through code and creativity</p>
+    <section class="section">
+      <div class="container surface section-content">
+        <h2 class="section-title">Experience</h2>
+        <article class="timeline-item">
+          <h3>Social Media Manager</h3>
+          <p class="muted">Digital Wit</p>
+          <p>Created digital content, collaborated in teams, and managed social engagement campaigns.
+          </p>
+        </article>
+        <article class="timeline-item">
+          <h3>Private Tutor</h3>
+          <p class="muted">3+ years</p>
+          <p>Provided personalized lessons and helped students improve academic performance with structured learning
+            plans.</p>
+        </article>
+      </div>
+    </section>
 
-      <a href="projects.html"
-        class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
-        View My Work
-      </a>
-    </div>
-  </section>
+    <section class="section">
+      <div class="container surface section-content">
+        <h2 class="section-title">Education</h2>
+        <ul>
+          <li><strong>B.Sc in CSE</strong> - Daffodil International University</li>
+          <li><strong>HSC</strong> - Udayan Uchcha Madhyamik Bidyalaya, Dhaka</li>
+          <li><strong>SSC</strong> - Faizur Rahman Ideal Institute, Dhaka</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-  <!-- ABOUT -->
-  <section class="max-w-5xl mx-auto py-16 px-6">
-    <h2 class="text-3xl font-bold mb-6">About Me</h2>
-    <p class="text-lg leading-relaxed">
-      I am a Computer Science and Engineering student at Daffodil International University.
-      I enjoy solving problems through programming and have experience with C, Python, and Java.
-      Alongside my technical journey, I have worked as a tutor and social media manager,
-      which helped me develop communication, leadership, and teamwork skills.
-    </p>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="bg-white text-gray-800 py-16">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div class="p-4 shadow rounded skill-box">C</div>
-        <div class="p-4 shadow rounded skill-box">Python</div>
-        <div class="p-4 shadow rounded skill-box">Java</div>
-        <div class="p-4 shadow rounded skill-box">MS Office</div>
-        <div class="p-4 shadow rounded skill-box">Canva</div>
-        <div class="p-4 shadow rounded skill-box">Photoshop</div>
-        <div class="p-4 shadow rounded skill-box">Teamwork</div>
-        <div class="p-4 shadow rounded skill-box">Communication</div>
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <p>Copyright 2026 Tamzidul Haque</p>
+      <div class="social-links" aria-label="Social links">
+        <a href="https://github.com/tamzid1103" target="_blank" rel="noopener noreferrer"
+          aria-label="GitHub profile">GH</a>
+        <a href="contact.html" aria-label="Contact page">CT</a>
       </div>
     </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="max-w-5xl mx-auto py-16 px-6">
-    <h2 class="text-3xl font-bold mb-8">Experience</h2>
-
-    <div class="space-y-6">
-      <div>
-        <h3 class="font-semibold text-xl">Private Tutor</h3>
-        <p class="text-sm">3+ Years Experience</p>
-        <p>Guided students with personalized lessons and helped improve academic performance.</p>
-      </div>
-
-      <div>
-        <h3 class="font-semibold text-xl">Social Media Manager</h3>
-        <p class="text-sm">Digital Wit</p>
-        <p>Created digital content, collaborated in teams, and managed social engagement.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="bg-white text-gray-800 py-16">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-8">Education</h2>
-
-      <ul class="space-y-4">
-        <li><strong>B.Sc in CSE</strong> – Daffodil International University</li>
-        <li><strong>HSC</strong> – Udayan Uchcha Madhyamik Bidyalaya, Dhaka</li>
-        <li><strong>SSC</strong> – Faizur Rahman Ideal Institute, Dhaka</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="text-center py-6 bg-blue-900/40">
-    <div class="mb-3">
-      <a href="http://github.com/tamzid1103" class="mx-2"><i class="fab fa-github"></i></a>
-      <a href="https://tr.ee/PV5NGtwpgq" class="mx-2"><i class="fas fa-link"></i></a>
-    </div>
-    <p>© 2026 Tamzidul Haque</p>
   </footer>
 
-  <!-- PARTICLES -->
   <script>
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 80 },
-        size: { value: 3 },
-        move: { speed: 2 },
-        line_linked: { enable: true }
+    const menuToggle = document.querySelector("[data-menu-toggle]");
+    const siteNav = document.getElementById("site-nav");
+
+    if (menuToggle && siteNav) {
+      menuToggle.addEventListener("click", () => {
+        const isOpen = siteNav.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    }
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduceMotion && window.particlesJS) {
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 55 },
+          size: { value: 2.8 },
+          move: { speed: 1.1 },
+          line_linked: { enable: true, opacity: 0.28 }
+        },
+        interactivity: {
+          events: {
+            onhover: { enable: false },
+            onclick: { enable: false }
+          }
+        }
+      });
+    } else {
+      const layer = document.getElementById("particles-js");
+      if (layer) {
+        layer.style.display = "none";
+      }
+    }
+
+    document.addEventListener("click", (event) => {
+      if (!siteNav || !menuToggle) return;
+      const clickedInside = siteNav.contains(event.target) || menuToggle.contains(event.target);
+      if (!clickedInside) {
+        siteNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
       }
     });
   </script>

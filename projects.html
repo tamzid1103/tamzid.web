@@ -1,18 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Projects page for Tamzidul Haque portfolio. Detailed project case studies and code links will be added soon.">
+    <meta name="theme-color" content="#0a2f6f">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projects | Tamzidul Haque">
+    <meta property="og:description" content="Project case studies from Tamzidul Haque will be showcased here soon.">
+    <meta property="og:image" content="tamzid_website.jpg">
+    <meta property="og:url" content="projects.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Tamzidul Haque">
+    <meta name="twitter:description" content="Projects and practical software work by Tamzidul Haque.">
+    <meta name="twitter:image" content="tamzid_website.jpg">
     <title>Projects - Tamzid</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-blue-600 text-white flex items-center justify-center h-screen">
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <div class="text-center">
-        <h1 class="text-4xl font-bold mb-4">Projects Coming Soon 🚀</h1>
-        <p>I will showcase my work here soon.</p>
-        <a href="index.html" class="underline mt-4 block">Back to Home</a>
-    </div>
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="brand" href="index.html">Tamzidul Haque</a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+                aria-label="Toggle menu" data-menu-toggle>
+                Menu
+            </button>
+            <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a class="active" href="projects.html" aria-current="page">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="section">
+            <div class="container surface section-content project-shell">
+                <h1 class="section-title">Projects</h1>
+                <p class="muted">I am currently preparing full case studies for this section.
+                    Each project card will include the problem, my approach, stack, source code, and final outcome.</p>
+
+                <div class="project-preview-list" aria-label="Project placeholders">
+                    <article class="preview-card">
+                        <h2>Project Slot 1</h2>
+                        <p class="muted">Planned: a software project with GitHub repo, screenshots, and result summary.
+                        </p>
+                    </article>
+                    <article class="preview-card">
+                        <h2>Project Slot 2</h2>
+                        <p class="muted">Planned: challenge breakdown, architecture notes, and key learnings.</p>
+                    </article>
+                    <article class="preview-card">
+                        <h2>Project Slot 3</h2>
+                        <p class="muted">Planned: live demo link, performance notes, and future improvements.</p>
+                    </article>
+                </div>
+
+                <p class="muted">If you want early access to project details, contact me and I will share links
+                    directly.</p>
+                <a href="contact.html" class="button button-primary">Contact Me</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-wrap">
+            <p>Copyright 2026 Tamzidul Haque</p>
+            <div class="social-links" aria-label="Social links">
+                <a href="https://github.com/tamzid1103" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub profile">GH</a>
+                <a href="contact.html" aria-label="Contact page">CT</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector("[data-menu-toggle]");
+        const siteNav = document.getElementById("site-nav");
+
+        if (menuToggle && siteNav) {
+            menuToggle.addEventListener("click", () => {
+                const isOpen = siteNav.classList.toggle("open");
+                menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            });
+        }
+
+        document.addEventListener("click", (event) => {
+            if (!siteNav || !menuToggle) return;
+            const clickedInside = siteNav.contains(event.target) || menuToggle.contains(event.target);
+            if (!clickedInside) {
+                siteNav.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            }
+        });
+    </script>
 
 </body>
 
